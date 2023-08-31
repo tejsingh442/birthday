@@ -1,0 +1,97 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body{
+	background-color: aqua;
+}
+
+.card{
+	width: 640px;
+	height: 400px;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	perspective: 1200px;
+	transition: 1s;
+}
+
+.card:hover{
+	transform: rotate(-5deg);
+  }
+.card:hover .outside{
+	transform: rotateY(-130deg);
+}
+
+.outside,
+.inside {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  left: 50.1%;
+}
+
+.inside {
+	background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+	padding: 0 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	left: 50%;
+}
+.outside {
+	transform-style: preserve-3d;
+	z-index: 1;
+	transform-origin: left;
+	transition: 2s;
+	cursor: pointer;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+}
+
+.front {
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+  
+.back{
+	transform: rotateY(180deg);
+	background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+}
+
+.msg{
+	margin-top: 30px;
+	height: 100%;
+	font-size: 16px;
+	line-height: 1;
+	font-style: italic;
+}
+
+#cake{
+	font-size: 100px;
+}
+
+p{
+	margin-top: 10px;
+}
+
+
+
